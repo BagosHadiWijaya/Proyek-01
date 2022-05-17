@@ -91,23 +91,14 @@ class HomeController extends Controller
             $count=cart::where('phone',$user->phone)->count();
         return view('user.showcart', compact('count', 'cart'));
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> b36a7553b4179a939cb947160da4ebd9f7db67e5
     public function deletecart($id)
     {
         $data=cart::find($id);
         $data->delete();
-<<<<<<< HEAD
         return redirect()->back()->with('message', 'Product Removed Successfully');
     }
 
-=======
-        return redirect()->back();
-        return redirect()->back()->with('message', 'Product Removed Successfully');
-    }
->>>>>>> b36a7553b4179a939cb947160da4ebd9f7db67e5
     public function confirmorder(Request $request)
     {
         $user=auth()->user();
