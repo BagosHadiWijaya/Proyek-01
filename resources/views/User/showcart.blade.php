@@ -117,7 +117,6 @@ https://templatemo.com/tm-546-sixteen-clothing
             <td style="padding:10px; font-size:20px; color:white;">Product Name</td>
             <td style="padding:10px; font-size:20px; color:white;">Quantity</td>
             <td style="padding:10px; font-size:20px; color:white;">Price</td>
-
             <td style="padding:10px; font-size:20px; color:white;">Action</td>
         </tr>
         <form action="{{url('order')}}" method="POST">
@@ -133,7 +132,6 @@ https://templatemo.com/tm-546-sixteen-clothing
             <td style="padding:10px; color:white;">
             <input type="text" name="price[]" value="{{$carts->price}}" hidden="">
             {{$carts->price}}</td>
-
             <td style="padding:10px; color:white;"><a class="btn btn-danger" href="{{url('delete', $carts->id)}}">Delete</td>
         </tr>
         @endforeach
