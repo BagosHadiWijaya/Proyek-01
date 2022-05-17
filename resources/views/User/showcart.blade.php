@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
-    <title>Sixteen Clothing HTML Template</title>
+    <title>TokoPashion Clothing Website</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -46,7 +46,7 @@ https://templatemo.com/tm-546-sixteen-clothing
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="index.html"><h2>Sixteen <em>Clothing</em></h2></a>
+          <a class="navbar-brand" href="index.html"><h2>TOKO <em>PASHION</em></h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -67,27 +67,28 @@ https://templatemo.com/tm-546-sixteen-clothing
                 <a class="nav-link" href="contact.html">Contact Us</a>
               </li>
 
-              <li class="nav-item">  
+            <li class="nav-item">
 
-              @if (Route::has('login'))
+              @if (Route::has('login'))  
                     @auth
+
                     <li class="nav-item">
                 <a class="nav-link" href="{{url('showcart')}}">
                 <i class="fas fa-shopping-cart"></i>  
                 Cart[{{$count}}]</a>
               </li>
                         <x-app-layout>
-                        </x-app-layout>
 
-                        @else
-                        <li><a class="nav-link" href="{{ route('login') }}" >Login</a></li>
+                        </x-app-layout>
+                    
+                    @else
+                        <li><a class="nav-link" href="{{ route('login') }}" >Log in</a></li>
 
                         @if (Route::has('register'))
                             <li><a class="nav-link" href="{{ route('register') }}" >Register</a></li>
                         @endif
                     @endauth
-                </div>
-            @endif
+              @endif
 
             </li>
 
@@ -96,9 +97,10 @@ https://templatemo.com/tm-546-sixteen-clothing
           </div>
         </div>
       </nav>
+
       @if(session()->has('message'))
 
-          <div class="alert alert-success">
+        <div class="alert alert-success">
 
           <button type="button" class="close" data-dismiss="alert">x</button>
 
@@ -106,8 +108,8 @@ https://templatemo.com/tm-546-sixteen-clothing
 
         </div>
         @endif
-    </header>
 
+    </header>
     <div style="padding: 100px;" align="center">
 
     <table>
@@ -139,6 +141,7 @@ https://templatemo.com/tm-546-sixteen-clothing
     <button class="btn btn-success">Confirm Order</button>
 </form>
     </div>
+
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
