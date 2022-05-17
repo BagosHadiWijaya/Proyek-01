@@ -124,7 +124,7 @@ https://templatemo.com/tm-546-sixteen-clothing
 @foreach($cart as $carts)
         <tr style="background-color:black;">
             <td style="padding:10px; color:white;">
-            <input type="text" name="productname[]" value="{{$carts->quantity}}" hidden="">
+            <input type="text" name="productname[]" value="{{$carts->product_title}}" hidden="">
             {{$carts->product_title}}</td>
             <td style="padding:10px; color:white;">
             <input type="text" name="quantity[]" value="{{$carts->quantity}}" hidden="">
