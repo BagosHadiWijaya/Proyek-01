@@ -10,7 +10,22 @@ class AdminController extends Controller
 {
     public function product()
     {
-        return view ('admin.product');
+        if(Auth::id())
+        {
+            if(Auth::user()->usertype=='1')
+            {
+                return view('admin.product');
+            }
+            else
+            {
+                return redirect()->back();
+            }
+        }
+        else
+        {
+            return redirect('login');
+        }
+        
     }
 
     public function uploadproduct(request $request)
@@ -33,19 +48,20 @@ class AdminController extends Controller
     public function showproduct()
     {
         $data=product::all();
-        return view ('admin.showproduct',compact('data'));
+        return view('admin.showproduct', compact('data'));
     }
 
-    public function deleteproduct($id) 
+    public function deleteproduct($id)
     {
         $data=product::find($id);
         $data->delete();
-        return redirect()->back()->with('message', 'Product Deleted');
+        return redirect()->back()->with('message', 'Product Deleted Successfully');
     }
 
     public function updateview($id)
     {
         $data=product::find($id);
+        
         return view('admin.updateview', compact('data'));
     }
 
@@ -55,9 +71,9 @@ class AdminController extends Controller
         $image=$request->file;
         if($image)
         {
-            $imagename=time().'.'.$image->getClientOriginalExtension();
-            $request->file->move('productimage', $imagename);
-            $data->image=$imagename;
+        $imagename=time().'.'.$image->getClientOriginalExtension();
+        $request->file->move('productimage', $imagename);
+        $data->image=$imagename;
         }
 
         $data->title=$request->title;
