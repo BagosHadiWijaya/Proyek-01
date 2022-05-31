@@ -36,4 +36,4 @@ Route::get('/delete/{id}',[HomeController::class, 'deletecart']);
 Route::post('/order',[HomeController::class, 'confirmorder']);
 Route::get('/showorder',[AdminController::class, 'showorder']);
 Route::get('/updatestatus/{id}',[AdminController::class, 'updatestatus']);
-Route::get('/showcart',[HomeController::class, 'showcart']);
+Route::get('/welcome',[AdminController::class, 'welcome']);

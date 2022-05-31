@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
-    <title>Sixteen Clothing HTML Template</title>
+    <title>TokoPashion Clothing Website</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -46,7 +46,7 @@ https://templatemo.com/tm-546-sixteen-clothing
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="index.html"><h2>Sixteen <em>Clothing</em></h2></a>
+          <a class="navbar-brand" href="index.html"><h2>TOKO <em>PASHION</em></h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -58,7 +58,7 @@ https://templatemo.com/tm-546-sixteen-clothing
                 </a>
               </li> 
               <li class="nav-item">
-                <a class="nav-link" href="products.html">Our Products</a>
+                <a class="nav-link" href="{{url('allproduct')}}">Our Products</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="about.html">About Us</a>
@@ -67,27 +67,28 @@ https://templatemo.com/tm-546-sixteen-clothing
                 <a class="nav-link" href="contact.html">Contact Us</a>
               </li>
 
-              <li class="nav-item">  
+            <li class="nav-item">
 
-              @if (Route::has('login'))
+              @if (Route::has('login'))  
                     @auth
+
                     <li class="nav-item">
                 <a class="nav-link" href="{{url('showcart')}}">
                 <i class="fas fa-shopping-cart"></i>  
                 Cart[{{$count}}]</a>
               </li>
                         <x-app-layout>
-                        </x-app-layout>
 
-                        @else
-                        <li><a class="nav-link" href="{{ route('login') }}" >Login</a></li>
+                        </x-app-layout>
+                    
+                    @else
+                        <li><a class="nav-link" href="{{ route('login') }}" >Log in</a></li>
 
                         @if (Route::has('register'))
                             <li><a class="nav-link" href="{{ route('register') }}" >Register</a></li>
                         @endif
                     @endauth
-                </div>
-            @endif
+              @endif
 
             </li>
 
@@ -96,9 +97,10 @@ https://templatemo.com/tm-546-sixteen-clothing
           </div>
         </div>
       </nav>
+
       @if(session()->has('message'))
 
-          <div class="alert alert-success">
+        <div class="alert alert-success">
 
           <button type="button" class="close" data-dismiss="alert">x</button>
 
@@ -106,6 +108,7 @@ https://templatemo.com/tm-546-sixteen-clothing
 
         </div>
         @endif
+
     </header>
 
     <!-- Page Content -->
@@ -141,19 +144,14 @@ https://templatemo.com/tm-546-sixteen-clothing
         <div class="row">
           <div class="col-md-12">
             <div class="section-heading">
-              <h2>About Sixteen Clothing</h2>
+              <h2>About TokoPashion</h2>
             </div>
           </div>
           <div class="col-md-6">
             <div class="left-content">
-              <h4>Looking for the best products?</h4>
-              <p><a rel="nofollow" href="https://templatemo.com/tm-546-sixteen-clothing" target="_parent">This template</a> is free to use for your business websites. However, you have no permission to redistribute the downloadable ZIP file on any template collection website. <a rel="nofollow" href="https://templatemo.com/contact">Contact us</a> for more info.</p>
+              <h4>Bagaimana kualitas produk dari TokoPasion?</h4>
+              <p><a rel="nofollow" href="https://templatemo.com/tm-546-sixteen-clothing" target="_parent"></a>TOKOPASHION hanya menyediakan produk dengan kualitas terjamin. sudah banyak pembeli yang memberikan rating bagus. Sablon dan juga modelnya kece abis. Pokoknya cocok dah sama kamuu.. :)<a rel="nofollow" href="https://templatemo.com/contact"></a></p>
               <ul class="featured-list">
-                <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-                <li><a href="#">Consectetur an adipisicing elit</a></li>
-                <li><a href="#">It aquecorporis nulla aspernatur</a></li>
-                <li><a href="#">Corporis, omnis doloremque</a></li>
-                <li><a href="#">Non cum id reprehenderit</a></li>
               </ul>
               <a href="about.html" class="filled-button">Read More</a>
             </div>
@@ -175,11 +173,11 @@ https://templatemo.com/tm-546-sixteen-clothing
             <div class="inner-content">
               <div class="row">
                 <div class="col-md-8">
-                  <h4>Creative &amp; Unique <em>Sixteen</em> Products</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque corporis amet elite author nulla.</p>
+                  <h4>Tampil Keren &amp; Kece dari Produk <em>TokoPashion</em></h4>
+                  <p>Kualitas sudah terjamin bagus, model keren dan kece. Tunggu apalagi mari kita shopping di TOKOPASHION</p>
                 </div>
                 <div class="col-md-4">
-                  <a href="#" class="filled-button">Purchase Now</a>
+                  <a href="#" class="filled-button">Beli Sekarang</a>
                 </div>
               </div>
             </div>
@@ -194,9 +192,8 @@ https://templatemo.com/tm-546-sixteen-clothing
         <div class="row">
           <div class="col-md-12">
             <div class="inner-content">
-              <p>Copyright &copy; 2020 Sixteen Clothing Co., Ltd.
-            
-            - Design: <a rel="nofollow noopener" href="https://templatemo.com" target="_blank">TemplateMo</a></p>
+              <p>Copyright &copy; 2021 TokoPashion Co., Ltd.
+            </p>
             </div>
           </div>
         </div>

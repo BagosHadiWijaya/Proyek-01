@@ -1,32 +1,37 @@
-<x-app-layout>
 
-</x-app-layout>
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <bash href="/public">
-    @include('admin.css')
-    <style type="text/css">
+    <base href="/public">
+
+  @include('admin.css')
+  <style type="text/css">
     .title
     {
       color:white; padding-top: 25px; font-size: 25px;
     }
+
     label{
       display:inline-block;
       width: 200px;
     }
-    </style>
+  </style>
+
   </head>
   <body>
     
-    <!-- partial -->
+      <!-- partial -->
+      
+      @include('admin.sidebar')
 
-    @include('admin.sidebar') 
-    @include('admin.navbar')
 
-    <!-- partial -->
+      @include('admin.navbar')
+
+        <!-- partial -->
         
-    <div class="container-fluid page-body-wrapper">
+
+
+        <div class="container-fluid page-body-wrapper">
         <div class="container" align="center">
         <h1 class="title">Add Product</h1>
 
@@ -34,16 +39,17 @@
 
         <div class="alert alert-success">
 
-            <button type="button" class="close" data-dismiss="alert">x</button>
+          <button type="button" class="close" data-dismiss="alert">x</button>
 
         {{session()->get('message')}}
 
         </div>
         @endif
 
-        <form action="{{url('updateproduct', $data->id)}}" method="post" enctype="multipart/form-data">
+        <form action="{{url('updateproduct',$data->id)}}" method="post" enctype="multipart/form-data">
 
         @csrf
+
         <div style="padding:15px;">
           <label>Product Title</label>
           <input style="color:black;" type="text" name="title" value="{{$data->title}}"
@@ -69,13 +75,20 @@
         </div>
 
         <div style="padding:15px;">
-          <label>Old Image</label>
-          <img height ="100" width="100" src="/productimage/{{$data->image}}">
+          <label>Discount</label>
+          <input style="color:black;" type="text" name="discount" value="{{$data->discount}}"
+          required="">
         </div>
 
         <div style="padding:15px;">
+        <label>Old Image</label>
+          <img height="150" width="150" src="/productimage/{{$data->image}}">
+          
+          <div style="padding:15px;">
           <label>Change the image</label>
           <input type="file" name="file">
+          
+        </div>
         </div>
 
         <div style="padding:15px;">
@@ -86,9 +99,9 @@
         </div>
         </div>
 
-    <!-- partial -->
-    
-    @include('admin.script')
-       
+          <!-- partial -->
+        
+
+          @include('admin.script')
   </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,6 +11,7 @@
     {
       color:white; padding-top: 25px; font-size: 25px;
     }
+
     label{
       display:inline-block;
       width: 200px;
@@ -36,18 +38,17 @@
 
         <div class="alert alert-success">
 
-            <button type="button" class="close" data-dismiss="alert">x</button>
+          <button type="button" class="close" data-dismiss="alert">x</button>
 
         {{session()->get('message')}}
 
         </div>
         @endif
 
-    
-
         <form action="{{url('uploadproduct')}}" method="post" enctype="multipart/form-data">
 
         @csrf
+
         <div style="padding:15px;">
           <label>Product Title</label>
           <input style="color:black;" type="text" name="title" placeholder="Give a product title"
@@ -69,6 +70,12 @@
         <div style="padding:15px;">
           <label>Quantity</label>
           <input style="color:black;" type="text" name="quantity" placeholder="Product Quantity"
+          required="">
+        </div>
+
+        <div style="padding:15px;">
+          <label>Discount</label>
+          <input style="color:black;" type="text" name="discount" placeholder="Discount"
           required="">
         </div>
 
