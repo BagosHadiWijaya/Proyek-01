@@ -36,7 +36,7 @@
                 <td style="padding:20px;">Title</td>
                 <td style="padding:20px;">Description</td>
                 <td style="padding:20px;">Quantity</td>
-                <td style="padding:20px;">Discount</td>
+                
                 <td style="padding:20px;">Price</td>
                 <td style="padding:20px;">Image</td>
                 <td style="padding:20px;">Update</td>
@@ -49,7 +49,7 @@
                 <td>{{$product->title}}</td>
                 <td>{{$product->description}}</td>
                 <td>{{$product->quantity}}</td>
-                <td>{{$product->discount}}</td>
+                
                 <td>{{$product->price}}</td>
                 <td><img heigh="200px" width="200px" src="/productimage/{{$product->image}}"></td>
 

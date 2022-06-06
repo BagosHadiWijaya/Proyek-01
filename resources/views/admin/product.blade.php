@@ -73,11 +73,7 @@
           required="">
         </div>
 
-        <div style="padding:15px;">
-          <label>Discount</label>
-          <input style="color:black;" type="text" name="discount" placeholder="Discount"
-          required="">
-        </div>
+        
 
         <div style="padding:15px;">
           <input type="file" name="file">

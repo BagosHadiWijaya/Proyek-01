@@ -80,7 +80,7 @@ class AdminController extends Controller
         $data->price=$request->price;
         $data->description=$request->des;
         $data->quantity=$request->quantity;
-        $data->discount=$request->discount;
+        
 
         $data->save();
         return redirect()->back()->with('message', 'Product Updated Successfully');

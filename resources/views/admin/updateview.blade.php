@@ -75,12 +75,6 @@
         </div>
 
         <div style="padding:15px;">
-          <label>Discount</label>
-          <input style="color:black;" type="text" name="discount" value="{{$data->discount}}"
-          required="">
-        </div>
-
-        <div style="padding:15px;">
         <label>Old Image</label>
           <img height="150" width="150" src="/productimage/{{$data->image}}">
           
